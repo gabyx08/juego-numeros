@@ -1,0 +1,15 @@
+h2{
+	margin-top: 100px;
+}
+.acertado {
+	color:#f00;
+	font-weight:bold;
+}
+ 
+ .fin{
+ 	font-weight:bold;
+ }
+ 
+ .error{
+ 	color:#ccc;
+ }
