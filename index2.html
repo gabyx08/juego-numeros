@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<h2> "Adivina el número"</h2>
+
+				<!-- Modal Trigger -->
+		  <a class="waves-effect waves-light btn modal-trigger" id="botonEmpezar" href="#modal1">Empezar juego</a>
+
+		  <!-- Modal Structure -->
+		  <div id="modal1" class="modal">
+		    <div class="modal-content">
+		      <form onsubmit="return obtenerDificultad()">
+			    <p>
+			      <input name="group1" class="with-gap checked" type="radio" id="facil" />
+			      <label for="facil">Fácil</label>
+			    </p>
+			    <p>
+			      <input name="group1" class="with-gap checked" type="radio" id="intermedio" />
+			      <label for="intermedio">Intermedio</label>
+			    </p>
+			    <p>
+			      <input class="with-gap checked" name="group1" type="radio" id="dificil"  />
+			      <label for="dificil">Difícil</label>
+			    </p>
+			    <input type="submit" value="Empezar juego" class="modal-action modal-close waves-effect waves-light btn">
+			  </form>
+		    </div>
+		    <div class="modal-footer">
+		      
+		    </div>
+		  </div>
+
+		  <section id="juego">
+		  <form onsubmit="return adivinar()">
+        	 	<div>
+        	    	<h5 for="numero">Indica un numero entre 1 y 100:</h5>
+        	    	<input type="text" name="numero" id="numero">
+        	 	</div>
+
+        	    <input class="btn waves-effect waves-light" type="submit" value="Enviar" id="btnEnviar">
+        	    <input class="btn waves-effect waves-light" type="button" value="Juego Nuevo" id="juegoNuevo" disabled>
+    	   </form>
+    	 
+	       <div id="respuestas"></div>
+	       </section>
+	</div>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/app2.js"></script>
+</body>
+</html>

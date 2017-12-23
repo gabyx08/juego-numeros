@@ -4,6 +4,7 @@
  
         const adivinar = () =>
         {
+            console.log(numeroAdivinar);
             // obtenemos el numero de respuestas posibles
             let numeroRespuestas = document.getElementById("numeroRespuestas").value;
  
@@ -34,19 +35,19 @@
                             // El numero es superior
  
                             // Añadimos un texto a las respuestas
-                            respuestas += `<br> ${numero} - El numero que buscas es menor, intenta de nuevo`;
+                            respuestas += `<br> No es ${numero} . El numero que buscas es menor.`;
                             document.getElementById("numero").focus();
                         }else if(numero<numeroAdivinar){
                             // El numero es inferior
  
                             // Añadimos un texto a las respuestas
-                            respuestas += `<br> ${numero} - El numero que buscas es mayor, intenta de nuevo`;
+                            respuestas += `<br> No es ${numero} . El numero que buscas es mayor.`;
                             document.getElementById("numero").focus();
                         }else{
                             // has acertado
  
                             // Añadimos un texto a las respuestas
-                            respuestas += `<br><span class='acertado'> ${numero} - GANASTE!!</span>`;
+                            respuestas += `<br><span class='acertado'> ${numero} - GANASTE!!</span><audio autoplay src="audio/Queen -We Are The Champions fragmento.mp3"></audio><br><img src="http://www3.gobiernodecanarias.org/medusa/ecoblog/oamagar/files/2014/02/Gif_animado_para_orkut9xgoi8t1.gif">`;
  							// Habilitamos boton Juego Nuevo
  							document.getElementById("juegoNuevo").disabled = false;
 
@@ -55,10 +56,10 @@
                         // vaciamos el valor del numero
                         document.getElementById("numero").value = "";
                     }else{
-                        respuestas += `<br><span class='error'> ${numero} - Tiene que ser un valor numerico comprendido entre 1 y 100</span>`;
+                        respuestas += `<br><span class='error'> ${numero} - Tiene que ser un número entre 1 y 100</span>`;
                     }
                 }else{
-                    respuestas += `<br><span class='fin'>PERDISTE!! El numero era el ${numeroAdivinar}</span>`;
+                    respuestas += `<div><br><span class='fin'>PERDISTE!! El numero era el ${numeroAdivinar}.</span><audio autoplay src="audio/Nelsons haha.mp3"></audio><br><img src="img/looser.gif">`;
  					// Habilitamos boton Juego Nuevo
  					document.getElementById("juegoNuevo").disabled = false;
                     fin()
@@ -86,7 +87,7 @@
         // Simple función para validar un numero
         const isNumber = (n) =>
         {
-            return !isNaN(parseFloat(n)) && isFinite(n);
+            return !isNaN(parseFloat(n));
         }
 
         const jugarOtraVez = () => location.reload();

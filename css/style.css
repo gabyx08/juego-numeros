@@ -2,14 +2,20 @@ h2{
 	margin-top: 100px;
 }
 .acertado {
-	color:#f00;
 	font-weight:bold;
+	color:#1a4f98;
+	font-size: 28px;
 }
  
  .fin{
  	font-weight:bold;
+ 	color:red;
+ 	font-size: 28px;
  }
  
  .error{
  	color:#ccc;
+ }
+ #juego{
+ 	display:none;
  }
